@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naomi Aprilia – Creative Portfolio</title>
+  <meta name="description" content="Portfolio – Naomi Aprilia, Web Developer & IoT enthusiast" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="particles"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav">
+    <a class="logo" href="#home" aria-label="Go to Home">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">NA</span>
+      <span class="logo-bracket">&gt;</span>
+    </a>
+
+    <div class="menu">
+      <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+      <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="#organizations" class="nav-link" data-i18n="nav.org">Organizations</a>
+      <a href="#certificates" class="nav-link" data-i18n="nav.certs">Certificates</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Ganti bahasa">EN</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="hero-content" data-aos="fade-right">
+        <div class="intro-badge">
+          <span class="badge-icon">👋</span>
+          <span data-i18n="hero.badge">Welcome to my creative space</span>
+        </div>
+
+        <h1>
+          <span class="greeting" data-i18n="hero.greeting">Hi, I'm</span>
+          <span class="name-highlight">Naomi Aprilia</span>
+          <span class="name-highlight">Butar butar</span>
+        </h1> 
+
+        <div class="typing-container">
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor">|</span>
+        </div>
+
+        <p class="lead" data-i18n="hero.lead">
+          Passionate about creating <strong>innovative web solutions</strong>, designing
+          <strong>intuitive interfaces</strong>, and building <strong>smart IoT systems</strong>.
+          Let's build something amazing together! 🚀
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">
+            <span data-i18n="hero.ctaPrimary">Let's Connect</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a class="btn btn-outline" href="#projects">
+            <span data-i18n="hero.ctaSecondary">View Projects</span>
+            <span class="btn-icon">📁</span>
+          </a>
+        </div>
+
+        <div class="socials">
+          <a class="social-icon" href="https://wa.me/6281268300201" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/naomi-aprilia-butar-butar-a6a48a303" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a class="social-icon" href="https://github.com/naomi" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a class="social-icon" href="https://www.instagram.com/" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <span data-i18n="hero.scroll">Scroll to explore</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
+        <div class="profile-container">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+
+          <div class="profile-ring">
+            <img src="d:\.PERKULIAHAN\Semester 5\magang\nomi .jpg" alt="Naomi Aprilia" />
+            <div class="profile-glow"></div>
+          </div>
+
+          <div class="floating-badge badge-1">💻</div>
+          <div class="floating-badge badge-2">🎨</div>
+          <div class="floating-badge badge-3">🔧</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-number">01.</span>
+        <h2 class="section-title" data-i18n="about.title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content card" data-aos="fade-right">
+          <p class="about-intro" data-i18n="about.intro">
+            I'm a <span class="highlight">Computer Technology student</span> at Del Institute of Technology
+            with a passion for turning ideas into reality through code and creativity.
+          </p>
+          <p data-i18n="about.body">
+            My journey in tech started with curiosity about how things work, and now I'm diving deep into
+            <strong>web development</strong>, <strong>IoT systems</strong>, and <strong>UI/UX design</strong>.
+            I enjoy building secure, efficient, and user-friendly applications.
+          </p>
+        </div>
+
+        <div class="education-card card" data-aos="fade-left">
+          <h3 class="education-title" data-i18n="edu.title">Education</h3>
+          <p class="education-degree" data-i18n="edu.degree">
+            Diploma in Computer Technology
+          </p>
+          <p class="education-school" data-i18n="edu.school">
+            Del Institute of Technology — Sitoluama, Laguboti, Toba
+          </p>
+          <p class="education-period" data-i18n="edu.period">
+            Aug 2023 — Sep 2026 (Expected)
+          </p>
+          <p class="education-gpa" data-i18n="edu.gpa">
+            GPA: 2.98 / 4.00
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-number">02.</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+      </div>
+
+      <div class="skills-container">
+        <!-- Development -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="category-header">
+            <span class="category-icon">💻</span>
+            <h3>Development</h3>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML &amp; CSS</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">React &amp; Vue.js</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="category-header">
+            <span class="category-icon">🎨</span>
+            <h3>Design</h3>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Figma &amp; Adobe XD</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Responsive Design</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IoT & Systems -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="category-header">
+            <span class="category-icon">🔧</span>
+            <h3>IoT &amp; Systems</h3>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Arduino &amp; ESP32</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">IoT Protocols</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Data Analysis</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Featured project -->
+        <article class="project featured" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\TA1.jpeg" alt="OTA Firmware Update" />
+            <div class="project-overlay">
+              <span class="project-tag featured-tag">Featured Project</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Research Project</span>
+            <h3>OTA Firmware Update Security Analysis</h3>
+            <p>
+              Comprehensive comparative study analyzing ESP32 resource consumption during
+              Over-The-Air firmware updates using SHA-256, HMAC-SHA256, and AES encryption.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">ESP32</span>
+              <span class="tech-tag">Security</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Cryptography</span>
+            </div>
+<div class="project-links">
+  <a
+    href="d:\.PERKULIAHAN\Semester 5\magang\naomi-portofolio\Laporan_Seminar_Hasil__Kel.09.pdf"
+    class="project-link"
+    target="_blank"
+    rel="noopener"
+  >
+    View Details →
+  </a>
+</div>
+          </div>
+        </article>
+
+        <!-- Other projects -->
+        <article class="project" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\PAII.jpeg" alt="IoT Aquarium" />
+            <div class="project-number">01</div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">IoT System</span>
+            <h3>Smart Aquarium Monitoring</h3>
+            <p>Real-time monitoring system with automated feeding, temperature control, and web dashboard.</p>
+<div class="project-tech">
+  <span class="tech-tag">ESP32</span>
+  <span class="tech-tag">Sensors</span>
+  <span class="tech-tag">Dashboard</span>
+</div>
+<div class="project-links">
+  <a
+    href="docs/smart-aquarium-report.pdf"
+    class="project-link"
+    target="_blank"
+    rel="noopener"
+  >
+    View Details →
+  </a>
+</div>
+          </div>
+        </article>
+
+        <article class="project" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\SISTAN.jpeg" alt="Fire Detection" />
+            <div class="project-number">02</div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Safety System</span>
+            <h3>Fire &amp; Gas Detection System</h3>
+            <p>Early-warning system with flame and gas sensors for residential and industrial safety.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Alert System</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\PAI.jpeg" alt="E-Archive" />
+            <div class="project-number">03</div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Web Application</span>
+            <h3>E-Archive System</h3>
+            <p>Modern archival system with improved UI/UX, advanced search, and role management.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Web Dev</span>
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Database</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-aos="fade-up" data-aos-delay="350">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\Proyek_WEB.jpeg" alt="Website Project" />
+            <div class="project-number">04</div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Web Application</span>
+            <h3>Website Project</h3>
+            <p>Modern archival system with improved UI/UX, advanced search, and role management.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Web Dev</span>
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Database</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <img src="c:\Users\LENOVO\Downloads\MAGANG\Proyek_Figma.jpeg" alt="Figma Project" />
+            <div class="project-number">05</div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Figma Project</span>
+            <h3>Keteknowiraan</h3>
+            <p>Modern archival system with improved UI/UX, advanced search, and role management.</p>
+            <div class="project-tech">
+              <span class="tech-tag">UI/UX</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ORGANIZATION SECTION -->
+    <section id="organizations" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-number">04.</span>
+        <h2 class="section-title" data-i18n="org.title">Experience &amp; Organizations</h2>
+      </div>
+
+      <div class="org-grid">
+        <article class="org-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="org-icon-wrap">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="org-main">
+            <h3 class="org-role" data-i18n="org.bem.role">Arts &amp; Culture Department Member</h3>
+            <p class="org-name" data-i18n="org.bem.name">
+              Student Executive Board – Del Institute of Technology
+            </p>
+            <p class="org-meta" data-i18n="org.bem.meta">
+              Sitoluama, Laguboti, Toba, North Sumatra · Oct 2024 – Present
+            </p>
+            <ul class="org-list">
+              <li data-i18n="org.bem.point1">
+                Organized and coordinated campus art and cultural events such as performances, exhibitions, and creative competitions.
+              </li>
+              <li data-i18n="org.bem.point2">
+                Promoted cultural appreciation and artistic expression while encouraging collaboration and creativity among students.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="org-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="org-icon-wrap">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <div class="org-main">
+            <h3 class="org-role" data-i18n="org.choir.role">Choir Member</h3>
+            <p class="org-name" data-i18n="org.choir.name">
+              Matheo Choir – Del Institute of Technology
+            </p>
+            <p class="org-meta" data-i18n="org.choir.meta">
+              Nov 2023 – Present
+            </p>
+            <ul class="org-list">
+              <li data-i18n="org.choir.point1">
+                Actively participated in campus and external performances representing the institution.
+              </li>
+              <li data-i18n="org.choir.point2">
+                Contributed to vocal training, musical arrangements, and event coordination for concerts and ceremonial performances.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="org-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="org-icon-wrap">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <div class="org-main">
+            <h3 class="org-role" data-i18n="org.fest.role">Event Committee Member</h3>
+            <p class="org-name" data-i18n="org.fest.name">
+              IT Del Fest – Del Institute of Technology
+            </p>
+            <p class="org-meta" data-i18n="org.fest.meta">
+              Sitoluama, Laguboti, Toba, North Sumatra · Aug 2025 – Present
+            </p>
+            <ul class="org-list">
+              <li data-i18n="org.fest.point1">
+                Collaborated with cross-functional teams to design event concepts and manage execution.
+              </li>
+              <li data-i18n="org.fest.point2">
+                Assisted logistical arrangements, participant management, and promotional activities for public community events.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="org-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="org-icon-wrap">
+            <i class="fa-solid fa-check-to-slot"></i>
+          </div>
+          <div class="org-main">
+            <h3 class="org-role" data-i18n="org.election.role">Vote Counting Committee</h3>
+            <p class="org-name" data-i18n="org.election.name">
+              Computer Technology Student Association – IT Del
+            </p>
+            <p class="org-meta" data-i18n="org.election.meta">
+              Election of Chairman &amp; Vice Chairman
+            </p>
+            <ul class="org-list">
+              <li data-i18n="org.election.point1">
+                Responsible for validating and counting votes to ensure a fair and transparent election process.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-number">05.</span>
+        <h2 class="section-title">Certificates &amp; Achievements</h2>
+      </div>
+
+      <div class="certificates-grid">
+        <div
+          class="certificate-item"
+          data-aos="flip-left"
+          data-aos-delay="100"
+          data-index="0"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            class="certificate-thumbnail"
+            src="c:\Users\LENOVO\Downloads\MAGANG\Website Developer - Backend.jpeg"
+            alt="Website Developer - Backend"
+          />
+          <div class="certificate-overlay">
+            <div class="expand-icon">
+              <span>🔍</span>
+              <span class="expand-text">View Certificate</span>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <div class="certificate-issuer">MySkil</div>
+            <h3>Web Development Bootcamp</h3>
+            <div class="certificate-date">📅 July 2025</div>
+          </div>
+        </div>
+
+        <div
+          class="certificate-item"
+          data-aos="flip-left"
+          data-aos-delay="200"
+          data-index="1"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            class="certificate-thumbnail"
+            src="c:\Users\LENOVO\Downloads\MAGANG\HCIA-Cloud Competing.png"
+            alt="Cloud Computing Certificate"
+          />
+          <div class="certificate-overlay">
+            <div class="expand-icon">
+              <span>🔍</span>
+              <span class="expand-text">View Certificate</span>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <div class="certificate-issuer">Dicoding</div>
+            <h3>UI/UX Design Fundamental</h3>
+            <div class="certificate-date">📅 July 2024</div>
+          </div>
+        </div>
+
+        <div
+          class="certificate-item"
+          data-aos="flip-left"
+          data-aos-delay="250"
+          data-index="2"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            class="certificate-thumbnail"
+            src="c:\Users\LENOVO\Downloads\MAGANG\HCIA-Security.png"
+            alt="IoT Certificate"
+          />
+          <div class="certificate-overlay">
+            <div class="expand-icon">
+              <span>🔍</span>
+              <span class="expand-text">View Certificate</span>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <div class="certificate-issuer">Cisco</div>
+            <h3>Introduction to IoT</h3>
+            <div class="certificate-date">📅 November 2024</div>
+          </div>
+        </div>
+
+        <div
+          class="certificate-item"
+          data-aos="flip-left"
+          data-aos-delay="300"
+          data-index="3"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            class="certificate-thumbnail"
+            src="c:\Users\LENOVO\Downloads\MAGANG\HCIA-Datacom.png"
+            alt="IoT Certificate"
+          />
+          <div class="certificate-overlay">
+            <div class="expand-icon">
+              <span>🔍</span>
+              <span class="expand-text">View Certificate</span>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <div class="certificate-issuer">Cisco</div>
+            <h3>Introduction to IoT</h3>
+            <div class="certificate-date">📅 November 2024</div>
+          </div>
+        </div>
+
+        <div
+          class="certificate-item"
+          data-aos="flip-left"
+          data-aos-delay="350"
+          data-index="4"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            class="certificate-thumbnail"
+            src="c:\Users\LENOVO\Downloads\MAGANG\Python Essentials 1.jpeg"
+            alt="IoT Certificate"
+          />
+          <div class="certificate-overlay">
+            <div class="expand-icon">
+              <span>🔍</span>
+              <span class="expand-text">View Certificate</span>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <div class="certificate-issuer">Cisco</div>
+            <h3>Introduction to IoT</h3>
+            <div class="certificate-date">📅 November 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+<section id="contact" class="section" data-aos="fade-up">
+  <div class="section-header">
+    <span class="section-number">06.</span>
+    <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
+  </div>
+
+  <div class="contact-simple">
+    <p class="contact-subtitle" data-i18n="contact.subtitle">
+      Or contact me directly via this form or social media:
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form id="contactForm" class="contact-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary contact-submit">
+        Send Message
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <p id="formStatus" class="form-status"></p>
+    </form>
+
+    <!-- SOCIAL ICONS -->
+    <div class="socials contact-socials">
+      <a class="social-icon" href="https://wa.me/6281268300201" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a class="social-icon" href="https://www.linkedin.com/in/naomi-aprilia-butar-butar-a6a48a303" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="social-icon" href="https://github.com/naomi" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a class="social-icon" href="https://www.instagram.com/" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text" data-i18n="footer.text">
+      © <span id="year"></span> Naomi Aprilia. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Document Viewer Modal -->
+<div id="docModal" class="modal doc-modal">
+  <span id="closeDocModal" class="modal-close">✖</span>
+
+  <div class="doc-modal-content">
+    <div class="doc-modal-header">
+      <h3 id="docModalTitle">Document Title</h3>
+      <a id="docDownload" href="#" class="btn btn-outline doc-download" download>
+        Download
+      </a>
+    </div>
+
+    <iframe
+      id="docFrame"
+      src=""
+      title="Document viewer"
+      class="doc-frame"
+    ></iframe>
+  </div>
+</div>
+
+  <!-- Certificate Modal -->
+  <div id="certModal" class="modal">
+    <span id="closeModal" class="modal-close">✖</span>
+    <img id="modalImg" class="modal-content" alt="Certificate preview" />
+    <div id="modalCaption" class="modal-caption"></div>
+
+    <button id="prevCert" class="modal-nav prev">⟨</button>
+    <button id="nextCert" class="modal-nav next">⟩</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- INIT AOS LANGSUNG DI SINI DULU -->
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  </script>
+
+  <!-- Baru script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
+

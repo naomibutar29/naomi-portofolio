@@ -343,6 +343,108 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") showNext();
 });
 
+/* ========= CONTACT FORM (Formspree) ========= */
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault(); // cegah reload halaman
+
+    if (!formStatus) return;
+
+    formStatus.textContent = "Sending...";
+    formStatus.className = "form-status sending";
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xykzrnvy", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        formStatus.textContent = "Message sent successfully! ✅";
+        formStatus.className = "form-status success";
+        contactForm.reset();
+      } else {
+        formStatus.textContent =
+          "Failed to send message. Please try again later.";
+        formStatus.className = "form-status error";
+      }
+    } catch (err) {
+      formStatus.textContent =
+        "An error occurred. Please check your connection.";
+      formStatus.className = "form-status error";
+    }
+  });
+}
+
+/* ========= PROJECT DOCUMENT VIEWER ========= */
+const docModal = document.getElementById("docModal");
+const closeDocModalBtn = document.getElementById("closeDocModal");
+const docFrame = document.getElementById("docFrame");
+const docModalTitle = document.getElementById("docModalTitle");
+const docDownload = document.getElementById("docDownload");
+const docLinks = document.querySelectorAll(".doc-link");
+
+function openDocModal(url, title) {
+  if (!docModal || !docFrame || !docModalTitle || !docDownload) return;
+
+  docFrame.src = url;
+  docModalTitle.textContent = title || "Document";
+  docDownload.href = url;
+
+  docModal.style.display = "block";
+  docModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDocModal() {
+  if (!docModal || !docFrame) return;
+
+  docModal.style.display = "none";
+  docModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  docFrame.src = ""; // kosongkan supaya berhenti load
+}
+
+docLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const url = link.getAttribute("data-doc");
+    const title = link.getAttribute("data-title") || link.textContent.trim();
+    if (url) {
+      openDocModal(url, title);
+    }
+  });
+});
+
+if (closeDocModalBtn) {
+  closeDocModalBtn.addEventListener("click", closeDocModal);
+}
+
+if (docModal) {
+  docModal.addEventListener("click", (e) => {
+    if (e.target === docModal) {
+      closeDocModal();
+    }
+  });
+}
+
+document.addEventListener("keydown", (e) => {
+  const isOpen = docModal && docModal.style.display === "block";
+  if (!isOpen) return;
+
+  if (e.key === "Escape") {
+    closeDocModal();
+  }
+});
+
 /* ========= NAVBAR SHRINK ON SCROLL ========= */
 const nav = document.querySelector(".nav");
 
